@@ -2558,6 +2558,9 @@ h2, h3 {
     border-radius: 10px;
   }
   .site-header { z-index: 120; }
+  .header-main {
+    overflow: visible;
+  }
   .nav-backdrop {
     display: block;
     position: fixed;
