@@ -379,6 +379,41 @@
   });
   }
 
+  const packageTabs = document.querySelectorAll("[data-package-tab]");
+  const packagePanels = document.querySelectorAll("[data-package-panel]");
+  const packagePricingWrap = document.querySelector("[data-package-pricing]");
+  if (packageTabs.length && packagePanels.length) {
+    function setPackageTier(tier) {
+      packageTabs.forEach(function (item) {
+        const active = item.getAttribute("data-package-tab") === tier;
+        item.classList.toggle("is-active", active);
+        item.setAttribute("aria-selected", active ? "true" : "false");
+      });
+      packagePanels.forEach(function (panel) {
+        const active = panel.getAttribute("data-package-panel") === tier;
+        panel.classList.toggle("is-active", active);
+        panel.hidden = !active;
+      });
+      if (packagePricingWrap) {
+        packagePricingWrap.setAttribute("data-package-pricing", tier);
+      }
+      document.querySelectorAll("[data-price-tier]").forEach(function (cell) {
+        cell.classList.toggle("is-tier-active", cell.getAttribute("data-price-tier") === tier);
+      });
+    }
+
+    packageTabs.forEach(function (tab) {
+      tab.addEventListener("click", function () {
+        setPackageTier(tab.getAttribute("data-package-tab"));
+      });
+    });
+
+    const activePackageTab = document.querySelector(".package-tab.is-active");
+    setPackageTier(
+      (activePackageTab && activePackageTab.getAttribute("data-package-tab")) || "basic"
+    );
+  }
+
   const dock = document.getElementById("contactDock");
   const dockToggle = document.getElementById("contactDockToggle");
   if (dock && dockToggle) {

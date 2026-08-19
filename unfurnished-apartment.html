@@ -119,8 +119,65 @@
       </div>
     </section>
 
+    <section class="package-tabs" aria-label="Choose package tier">
+      <div class="container">
+        <div class="package-tab-bar package-tab-bar-duo" role="tablist" aria-label="Package tiers">
+          <button type="button" class="package-tab is-active" role="tab" id="package-tab-basic" aria-selected="true" aria-controls="package-basic unfurnished-pricing" data-package-tab="basic">Basic</button>
+          <button type="button" class="package-tab" role="tab" id="package-tab-premium" aria-selected="false" aria-controls="package-premium unfurnished-pricing" data-package-tab="premium">Premium</button>
+        </div>
+      </div>
+    </section>
+
     <section class="detail-wrap" id="unfurnished-details">
       <div class="container">
+        <div class="package-panel is-active" id="package-basic" role="tabpanel" aria-labelledby="package-tab-basic" data-package-panel="basic">
+        <article class="detail-block reveal">
+          <div class="detail-media">
+            <img src="assets/services/house.jpg" alt="Unfurnished living room and bedroom cleaning">
+          </div>
+          <div class="detail-copy">
+            <p class="eyebrow">01</p>
+            <h2>Living &amp; Bedroom</h2>
+            <ul class="detail-list">
+              <li>Cobweb removal &amp; wall dusting</li>
+              <li>Ceiling and fan dusting</li>
+              <li>Doors, windows &amp; mirrors</li>
+              <li>Switch board &amp; fixtures</li>
+              <li>Cupboard exterior cleaning</li>
+            </ul>
+          </div>
+        </article>
+        <article class="detail-block is-reverse reveal">
+          <div class="detail-media">
+            <img src="assets/services/bathroom.jpg" alt="Bathroom deep cleaning">
+          </div>
+          <div class="detail-copy">
+            <p class="eyebrow">02</p>
+            <h2>Bathroom Cleaning</h2>
+            <ul class="detail-list">
+              <li>Washbasin &amp; fixtures</li>
+              <li>Toilet seat &amp; fixtures</li>
+              <li>Wall tiles cleaning</li>
+            </ul>
+          </div>
+        </article>
+        <article class="detail-block reveal">
+          <div class="detail-media">
+            <img src="assets/services/kitchen.jpg" alt="Kitchen deep cleaning">
+          </div>
+          <div class="detail-copy">
+            <p class="eyebrow">03</p>
+            <h2>Kitchen Cleaning</h2>
+            <ul class="detail-list">
+              <li>Cabinets exterior &amp; stove</li>
+              <li>Kitchen sink</li>
+              <li>Kitchen tiles &amp; slabs</li>
+            </ul>
+          </div>
+        </article>
+        </div>
+
+        <div class="package-panel" id="package-premium" role="tabpanel" aria-labelledby="package-tab-premium" data-package-panel="premium" hidden>
         <article class="detail-block reveal" id="living-bedroom">
           <div class="detail-media">
             <img src="assets/services/house.jpg" alt="Unfurnished living room and bedroom cleaning">
@@ -176,6 +233,63 @@
             </ul>
           </div>
         </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="package-pricing reveal" id="unfurnished-pricing" aria-labelledby="unfurnished-pricing-title">
+      <div class="container">
+        <div class="package-pricing-head">
+          <p class="eyebrow">Pricing</p>
+          <h2 id="unfurnished-pricing-title">Unfurnished Apartment Rates</h2>
+          <div class="gold-rule center"></div>
+          <p class="section-intro">Choose Basic or Premium above — the matching column is highlighted below.</p>
+        </div>
+        <div class="package-price-table-wrap" data-package-pricing="basic">
+          <table class="package-price-table">
+            <caption class="visually-hidden">Unfurnished apartment deep cleaning prices by BHK and package tier</caption>
+            <thead>
+              <tr>
+                <th scope="col">Sl. No</th>
+                <th scope="col">BHK</th>
+                <th scope="col" class="price-col-basic" data-price-tier="basic">Basic</th>
+                <th scope="col" class="price-col-premium" data-price-tier="premium">Premium</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>1 BHK</td>
+                <td class="price-col-basic" data-price-tier="basic"><strong>₹3,299</strong></td>
+                <td class="price-col-premium" data-price-tier="premium"><strong>₹4,299</strong></td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>2 BHK</td>
+                <td class="price-col-basic" data-price-tier="basic"><strong>₹3,499</strong></td>
+                <td class="price-col-premium" data-price-tier="premium"><strong>₹4,799</strong></td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>3 BHK</td>
+                <td class="price-col-basic" data-price-tier="basic"><strong>₹4,499</strong></td>
+                <td class="price-col-premium" data-price-tier="premium"><strong>₹5,499</strong></td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>4 BHK</td>
+                <td class="price-col-basic" data-price-tier="basic"><strong>₹4,899</strong></td>
+                <td class="price-col-premium" data-price-tier="premium"><strong>₹5,999</strong></td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>5 BHK</td>
+                <td class="price-col-basic" data-price-tier="basic"><strong>₹5,499</strong></td>
+                <td class="price-col-premium" data-price-tier="premium"><strong>₹6,899</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </section>
 
@@ -186,7 +300,7 @@
         <div class="gold-rule center"></div>
         <div class="slide-actions">
           <a href="contact.html" class="btn btn-gold">Book Now</a>
-          <a href="pricing.html#price-02" class="btn btn-outline">View Prices</a>
+          <a href="pricing.html#price-02" class="btn btn-outline">All Prices</a>
         </div>
       </div>
     </section>

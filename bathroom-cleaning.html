@@ -120,15 +120,63 @@
       </div>
     </section>
 
+    <section class="package-tabs" aria-label="Choose package tier">
+      <div class="container">
+        <div class="package-tab-bar" role="tablist" aria-label="Package tiers">
+          <button type="button" class="package-tab is-active" role="tab" id="package-tab-basic" aria-selected="true" aria-controls="package-basic bathroom-pricing" data-package-tab="basic">Basic</button>
+          <button type="button" class="package-tab" role="tab" id="package-tab-premium" aria-selected="false" aria-controls="package-premium bathroom-pricing" data-package-tab="premium">Premium</button>
+          <button type="button" class="package-tab package-tab-royal" role="tab" id="package-tab-royal" aria-selected="false" aria-controls="package-royal bathroom-pricing" data-package-tab="royal">Royal</button>
+        </div>
+      </div>
+    </section>
+
     <section class="detail-wrap" id="bathroom-details">
       <div class="container">
+        <div class="package-panel is-active" id="package-basic" role="tabpanel" aria-labelledby="package-tab-basic" data-package-panel="basic">
+        <article class="detail-block reveal">
+          <div class="detail-media">
+            <img src="assets/services/bathroom.jpg" alt="Bathroom deep cleaning">
+          </div>
+          <div class="detail-copy">
+            <p class="eyebrow">What’s Included</p>
+            <h2>Bathroom — Basic</h2>
+            <ul class="detail-list">
+              <li>Water Closet and Wash Basin</li>
+              <li>Floor and Tile Scrubbing</li>
+              <li>Mirror and Glass Cleaning</li>
+            </ul>
+          </div>
+        </article>
+        </div>
+
+        <div class="package-panel" id="package-premium" role="tabpanel" aria-labelledby="package-tab-premium" data-package-panel="premium" hidden>
+        <article class="detail-block reveal">
+          <div class="detail-media">
+            <img src="assets/services/bathroom.jpg" alt="Bathroom deep cleaning">
+          </div>
+          <div class="detail-copy">
+            <p class="eyebrow">What’s Included</p>
+            <h2>Bathroom — Premium</h2>
+            <ul class="detail-list">
+              <li>Showers and Taps</li>
+              <li>Windows &amp; Exhaust Fan</li>
+              <li>Floor and Tile Scrubbing</li>
+              <li>Cobweb Removal</li>
+              <li>Mirror and Glass Cleaning</li>
+              <li>Water Closet and Wash Basin</li>
+            </ul>
+          </div>
+        </article>
+        </div>
+
+        <div class="package-panel" id="package-royal" role="tabpanel" aria-labelledby="package-tab-royal" data-package-panel="royal" hidden>
         <article class="detail-block reveal" id="bathroom-includes">
           <div class="detail-media">
             <img src="assets/services/bathroom.jpg" alt="Bathroom deep cleaning">
           </div>
           <div class="detail-copy">
             <p class="eyebrow">What’s Included</p>
-            <h2>Bathroom</h2>
+            <h2>Bathroom — Royal</h2>
             <ul class="detail-list">
               <li>Showers and Taps</li>
               <li>Windows &amp; Exhaust Fan</li>
@@ -137,9 +185,45 @@
               <li>Shelves and Cabinets from Outside, and Open Shelves if Emptied</li>
               <li>Mirror and Glass Cleaning</li>
               <li>Water Closet and Wash Basin</li>
+              <li>Tiles polishing</li>
             </ul>
           </div>
         </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="package-pricing reveal" id="bathroom-pricing" aria-labelledby="bathroom-pricing-title">
+      <div class="container">
+        <div class="package-pricing-head">
+          <p class="eyebrow">Pricing</p>
+          <h2 id="bathroom-pricing-title">Bathroom Deep Cleaning Rates</h2>
+          <div class="gold-rule center"></div>
+          <p class="section-intro">Choose Basic, Premium or Royal above — the matching column is highlighted below.</p>
+        </div>
+        <div class="package-price-table-wrap" data-package-pricing="basic">
+          <table class="package-price-table">
+            <caption class="visually-hidden">Bathroom deep cleaning prices by package tier</caption>
+            <thead>
+              <tr>
+                <th scope="col">Sl. No</th>
+                <th scope="col">Service</th>
+                <th scope="col" class="price-col-basic" data-price-tier="basic">Basic</th>
+                <th scope="col" class="price-col-premium" data-price-tier="premium">Premium</th>
+                <th scope="col" class="price-col-royal" data-price-tier="royal">Royal</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Bathroom Deep Cleaning</td>
+                <td class="price-col-basic" data-price-tier="basic"><strong>₹699</strong></td>
+                <td class="price-col-premium" data-price-tier="premium"><strong>₹799</strong></td>
+                <td class="price-col-royal" data-price-tier="royal"><strong>₹899</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </section>
 
@@ -150,7 +234,7 @@
         <div class="gold-rule center"></div>
         <div class="slide-actions">
           <a href="contact.html" class="btn btn-gold">Book Now</a>
-          <a href="pricing.html#price-04" class="btn btn-outline">View Prices</a>
+          <a href="pricing.html#price-04" class="btn btn-outline">All Prices</a>
         </div>
       </div>
     </section>

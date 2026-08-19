@@ -120,15 +120,43 @@
       </div>
     </section>
 
+    <section class="package-tabs" aria-label="Choose package tier">
+      <div class="container">
+        <div class="package-tab-bar package-tab-bar-duo" role="tablist" aria-label="Package tiers">
+          <button type="button" class="package-tab is-active" role="tab" id="package-tab-basic" aria-selected="true" aria-controls="package-basic kitchen-pricing" data-package-tab="basic">Basic</button>
+          <button type="button" class="package-tab" role="tab" id="package-tab-premium" aria-selected="false" aria-controls="package-premium kitchen-pricing" data-package-tab="premium">Premium</button>
+        </div>
+      </div>
+    </section>
+
     <section class="detail-wrap" id="kitchen-details">
       <div class="container">
+        <div class="package-panel is-active" id="package-basic" role="tabpanel" aria-labelledby="package-tab-basic" data-package-panel="basic">
+        <article class="detail-block reveal">
+          <div class="detail-media">
+            <img src="assets/services/kitchen.jpg" alt="Kitchen deep cleaning">
+          </div>
+          <div class="detail-copy">
+            <p class="eyebrow">What’s Included</p>
+            <h2>Kitchen — Basic</h2>
+            <ul class="detail-list">
+              <li>Kitchen Platform</li>
+              <li>Cabinets from Outside</li>
+              <li>Floor Scrubbing</li>
+              <li>Cobwebs Removal</li>
+            </ul>
+          </div>
+        </article>
+        </div>
+
+        <div class="package-panel" id="package-premium" role="tabpanel" aria-labelledby="package-tab-premium" data-package-panel="premium" hidden>
         <article class="detail-block reveal" id="kitchen-includes">
           <div class="detail-media">
             <img src="assets/services/kitchen.jpg" alt="Kitchen deep cleaning">
           </div>
           <div class="detail-copy">
             <p class="eyebrow">What’s Included</p>
-            <h2>Kitchen</h2>
+            <h2>Kitchen — Premium</h2>
             <ul class="detail-list">
               <li>Window &amp; Exhaust Fan</li>
               <li>Wiping of Appliances from Outside</li>
@@ -140,6 +168,68 @@
             </ul>
           </div>
         </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="package-pricing reveal" id="kitchen-pricing" aria-labelledby="kitchen-pricing-title">
+      <div class="container">
+        <div class="package-pricing-head">
+          <p class="eyebrow">Pricing</p>
+          <h2 id="kitchen-pricing-title">Kitchen Deep Cleaning Rates</h2>
+          <div class="gold-rule center"></div>
+          <p class="section-intro">Choose Basic or Premium above — the matching column is highlighted in both tables below.</p>
+        </div>
+        <div class="kitchen-pricing-grid" data-package-pricing="basic">
+          <div class="kitchen-pricing-block">
+            <h3>Kitchen Deep Clean — Furnished</h3>
+            <div class="package-price-table-wrap">
+              <table class="package-price-table">
+                <caption class="visually-hidden">Furnished kitchen deep cleaning prices by package tier</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Sl. No</th>
+                    <th scope="col">Service</th>
+                    <th scope="col" class="price-col-basic" data-price-tier="basic">Basic</th>
+                    <th scope="col" class="price-col-premium" data-price-tier="premium">Premium</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Kitchen Deep Clean — Furnished</td>
+                    <td class="price-col-basic" data-price-tier="basic"><strong>₹1,799</strong></td>
+                    <td class="price-col-premium" data-price-tier="premium"><strong>₹2,199</strong></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="kitchen-pricing-block">
+            <h3>Kitchen Deep Clean — Unfurnished</h3>
+            <div class="package-price-table-wrap">
+              <table class="package-price-table">
+                <caption class="visually-hidden">Unfurnished kitchen deep cleaning prices by package tier</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Sl. No</th>
+                    <th scope="col">Service</th>
+                    <th scope="col" class="price-col-basic" data-price-tier="basic">Basic</th>
+                    <th scope="col" class="price-col-premium" data-price-tier="premium">Premium</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Kitchen Deep Clean — Unfurnished</td>
+                    <td class="price-col-basic" data-price-tier="basic"><strong>₹1,399</strong></td>
+                    <td class="price-col-premium" data-price-tier="premium"><strong>₹1,799</strong></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -150,7 +240,7 @@
         <div class="gold-rule center"></div>
         <div class="slide-actions">
           <a href="contact.html" class="btn btn-gold">Book Now</a>
-          <a href="pricing.html#price-08" class="btn btn-outline">View Prices</a>
+          <a href="pricing.html#price-08" class="btn btn-outline">All Prices</a>
         </div>
       </div>
     </section>

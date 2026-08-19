@@ -119,8 +119,121 @@
       </div>
     </section>
 
+    <section class="package-tabs" aria-label="Choose package tier">
+      <div class="container">
+        <div class="package-tab-bar" role="tablist" aria-label="Package tiers">
+          <button type="button" class="package-tab is-active" role="tab" id="package-tab-basic" aria-selected="true" aria-controls="package-basic furnished-pricing" data-package-tab="basic">Basic</button>
+          <button type="button" class="package-tab" role="tab" id="package-tab-premium" aria-selected="false" aria-controls="package-premium furnished-pricing" data-package-tab="premium">Premium</button>
+          <button type="button" class="package-tab package-tab-royal" role="tab" id="package-tab-royal" aria-selected="false" aria-controls="package-royal furnished-pricing" data-package-tab="royal">Royal</button>
+        </div>
+      </div>
+    </section>
+
     <section class="detail-wrap" id="furnished-details">
       <div class="container">
+        <div class="package-panel is-active" id="package-basic" role="tabpanel" aria-labelledby="package-tab-basic" data-package-panel="basic">
+        <article class="detail-block reveal">
+          <div class="detail-media">
+            <img src="assets/services/full-home.jpg" alt="Living room and bedroom cleaning">
+          </div>
+          <div class="detail-copy">
+            <p class="eyebrow">01</p>
+            <h2>Living &amp; Bedroom</h2>
+            <ul class="detail-list">
+              <li>Cobweb removal &amp; wall dusting</li>
+              <li>Ceiling &amp; fan dusting</li>
+              <li>Doors, windows &amp; mirrors</li>
+              <li>Switch board &amp; fixtures</li>
+              <li>Cabinets and furniture exterior wiping</li>
+            </ul>
+          </div>
+        </article>
+        <article class="detail-block is-reverse reveal">
+          <div class="detail-media">
+            <img src="assets/services/bathroom.jpg" alt="Bathroom deep cleaning">
+          </div>
+          <div class="detail-copy">
+            <p class="eyebrow">02</p>
+            <h2>Bathroom Cleaning</h2>
+            <ul class="detail-list">
+              <li>Washbasin &amp; fixtures</li>
+              <li>Toilet seat &amp; fixtures</li>
+              <li>Wall tiles cleaning</li>
+            </ul>
+          </div>
+        </article>
+        <article class="detail-block reveal">
+          <div class="detail-media">
+            <img src="assets/services/kitchen.jpg" alt="Kitchen deep cleaning">
+          </div>
+          <div class="detail-copy">
+            <p class="eyebrow">03</p>
+            <h2>Kitchen Cleaning</h2>
+            <ul class="detail-list">
+              <li>Cabinets exterior &amp; stove</li>
+              <li>Kitchen sink</li>
+              <li>Kitchen tiles &amp; slabs</li>
+            </ul>
+          </div>
+        </article>
+        </div>
+
+        <div class="package-panel" id="package-premium" role="tabpanel" aria-labelledby="package-tab-premium" data-package-panel="premium" hidden>
+        <article class="detail-block reveal">
+          <div class="detail-media">
+            <img src="assets/services/full-home.jpg" alt="Living room and bedroom cleaning">
+          </div>
+          <div class="detail-copy">
+            <p class="eyebrow">01</p>
+            <h2>Living &amp; Bedroom</h2>
+            <ul class="detail-list">
+              <li>Machine floor scrubbing</li>
+              <li>Cobweb removal &amp; wall dusting</li>
+              <li>Ceiling &amp; fan dusting</li>
+              <li>Balcony &amp; utility area cleaning</li>
+              <li>Doors, windows &amp; mirrors</li>
+              <li>Switch board &amp; fixtures</li>
+              <li>Cabinets and furniture exterior wiping</li>
+              <li>Cupboard exterior cleaning</li>
+              <li>Cupboard interior cleaning (if empty)</li>
+            </ul>
+          </div>
+        </article>
+        <article class="detail-block is-reverse reveal">
+          <div class="detail-media">
+            <img src="assets/services/bathroom.jpg" alt="Bathroom deep cleaning">
+          </div>
+          <div class="detail-copy">
+            <p class="eyebrow">02</p>
+            <h2>Bathroom Cleaning</h2>
+            <ul class="detail-list">
+              <li>Machine floor scrubbing</li>
+              <li>Washbasin &amp; fixtures</li>
+              <li>Toilet seat &amp; fixtures</li>
+              <li>Wall tiles cleaning</li>
+              <li>Hard water stain removal</li>
+            </ul>
+          </div>
+        </article>
+        <article class="detail-block reveal">
+          <div class="detail-media">
+            <img src="assets/services/kitchen.jpg" alt="Kitchen deep cleaning">
+          </div>
+          <div class="detail-copy">
+            <p class="eyebrow">03</p>
+            <h2>Kitchen Cleaning</h2>
+            <ul class="detail-list">
+              <li>Cabinets interior with utensil removal</li>
+              <li>Cabinets exterior &amp; stove</li>
+              <li>Kitchen sink &amp; under the sink</li>
+              <li>Removal of oil/grease stains</li>
+              <li>Kitchen tiles &amp; slabs</li>
+            </ul>
+          </div>
+        </article>
+        </div>
+
+        <div class="package-panel" id="package-royal" role="tabpanel" aria-labelledby="package-tab-royal" data-package-panel="royal" hidden>
         <article class="detail-block reveal" id="living-bedroom">
           <div class="detail-media">
             <img src="assets/services/full-home.jpg" alt="Living room and bedroom cleaning">
@@ -178,6 +291,69 @@
             </ul>
           </div>
         </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="package-pricing reveal" id="furnished-pricing" aria-labelledby="furnished-pricing-title">
+      <div class="container">
+        <div class="package-pricing-head">
+          <p class="eyebrow">Pricing</p>
+          <h2 id="furnished-pricing-title">Furnished Apartment Rates</h2>
+          <div class="gold-rule center"></div>
+          <p class="section-intro">Choose Basic, Premium or Royal above — the matching column is highlighted below.</p>
+        </div>
+        <div class="package-price-table-wrap" data-package-pricing="basic">
+          <table class="package-price-table">
+            <caption class="visually-hidden">Furnished apartment deep cleaning prices by BHK and package tier</caption>
+            <thead>
+              <tr>
+                <th scope="col">Sl. No</th>
+                <th scope="col">BHK</th>
+                <th scope="col" class="price-col-basic" data-price-tier="basic">Basic</th>
+                <th scope="col" class="price-col-premium" data-price-tier="premium">Premium</th>
+                <th scope="col" class="price-col-royal" data-price-tier="royal">Royal</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>1 BHK</td>
+                <td class="price-col-basic" data-price-tier="basic"><strong>₹3,299</strong></td>
+                <td class="price-col-premium" data-price-tier="premium"><strong>₹4,299</strong></td>
+                <td class="price-col-royal" data-price-tier="royal"><strong>₹5,499</strong></td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>2 BHK</td>
+                <td class="price-col-basic" data-price-tier="basic"><strong>₹3,699</strong></td>
+                <td class="price-col-premium" data-price-tier="premium"><strong>₹4,799</strong></td>
+                <td class="price-col-royal" data-price-tier="royal"><strong>₹6,399</strong></td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>3 BHK</td>
+                <td class="price-col-basic" data-price-tier="basic"><strong>₹4,799</strong></td>
+                <td class="price-col-premium" data-price-tier="premium"><strong>₹5,799</strong></td>
+                <td class="price-col-royal" data-price-tier="royal"><strong>₹7,499</strong></td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>4 BHK</td>
+                <td class="price-col-basic" data-price-tier="basic"><strong>₹5,299</strong></td>
+                <td class="price-col-premium" data-price-tier="premium"><strong>₹6,799</strong></td>
+                <td class="price-col-royal" data-price-tier="royal"><strong>₹8,499</strong></td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>5 BHK</td>
+                <td class="price-col-basic" data-price-tier="basic"><strong>₹5,899</strong></td>
+                <td class="price-col-premium" data-price-tier="premium"><strong>₹7,299</strong></td>
+                <td class="price-col-royal" data-price-tier="royal"><strong>₹8,999</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </section>
 
@@ -188,7 +364,7 @@
         <div class="gold-rule center"></div>
         <div class="slide-actions">
           <a href="contact.html" class="btn btn-gold">Book Now</a>
-          <a href="pricing.html#price-01" class="btn btn-outline">View Prices</a>
+          <a href="pricing.html#price-01" class="btn btn-outline">All Prices</a>
         </div>
       </div>
     </section>
