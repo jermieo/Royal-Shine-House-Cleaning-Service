@@ -417,4 +417,22 @@
     );
   }
 
+  // If a service page "View" button sends a tier to pricing.html,
+  // pre-select that tier by updating the relevant pricing section only.
+  // Example: pricing.html?tier=premium#price-01
+  const urlTier = new URLSearchParams(window.location.search).get("tier");
+  if (urlTier) {
+    const sectionIdFromHash = (window.location.hash || "").replace("#", "");
+    const sectionScope = sectionIdFromHash && document.getElementById(sectionIdFromHash)
+      ? document.getElementById(sectionIdFromHash)
+      : document;
+
+    sectionScope.querySelectorAll(".price-tier-table-wrap").forEach(function (wrap) {
+      wrap.setAttribute("data-package-pricing", urlTier);
+    });
+    sectionScope.querySelectorAll("[data-price-tier]").forEach(function (cell) {
+      cell.classList.toggle("is-tier-active", cell.getAttribute("data-price-tier") === urlTier);
+    });
+  }
+
 })();
