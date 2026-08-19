@@ -381,7 +381,7 @@
 
   const packageTabs = document.querySelectorAll("[data-package-tab]");
   const packagePanels = document.querySelectorAll("[data-package-panel]");
-  const packagePricingWrap = document.querySelector("[data-package-pricing]");
+  const packagePricingWraps = document.querySelectorAll("[data-package-pricing]");
   if (packageTabs.length && packagePanels.length) {
     function setPackageTier(tier) {
       packageTabs.forEach(function (item) {
@@ -394,9 +394,12 @@
         panel.classList.toggle("is-active", active);
         panel.hidden = !active;
       });
-      if (packagePricingWrap) {
-        packagePricingWrap.setAttribute("data-package-pricing", tier);
-      }
+      packagePricingWraps.forEach(function (wrap) {
+        wrap.setAttribute("data-package-pricing", tier);
+      });
+      document.querySelectorAll(".price-tier-table-wrap").forEach(function (wrap) {
+        wrap.setAttribute("data-package-pricing", tier);
+      });
       document.querySelectorAll("[data-price-tier]").forEach(function (cell) {
         cell.classList.toggle("is-tier-active", cell.getAttribute("data-price-tier") === tier);
       });

@@ -1891,6 +1891,32 @@ h2, h3 {
   min-width: 560px;
 }
 
+/* Always hide non-active tier columns in rated/checklist tables */
+.price-tier-table-wrap[data-package-pricing="basic"] [data-price-tier="premium"],
+.price-tier-table-wrap[data-package-pricing="basic"] [data-price-tier="royal"],
+.price-tier-table-wrap[data-package-pricing="premium"] [data-price-tier="basic"],
+.price-tier-table-wrap[data-package-pricing="premium"] [data-price-tier="royal"],
+.price-tier-table-wrap[data-package-pricing="royal"] [data-price-tier="basic"],
+.price-tier-table-wrap[data-package-pricing="royal"] [data-price-tier="premium"] {
+  display: none;
+}
+
+/* When only 1 column visible, table can be fluid */
+.price-tier-table-wrap[data-package-pricing] .rated-table {
+  min-width: 0;
+  width: 100%;
+}
+
+/* Highlight active tier column in rated tables */
+.price-tier-table-wrap[data-package-pricing="basic"] [data-price-tier="basic"],
+.price-tier-table-wrap[data-package-pricing="premium"] [data-price-tier="premium"] {
+  background: rgba(245, 130, 32, 0.08);
+}
+
+.price-tier-table-wrap[data-package-pricing="royal"] [data-price-tier="royal"] {
+  background: rgba(58, 20, 8, 0.06);
+}
+
 .rated-table th:first-child,
 .rated-table td:first-child {
   width: 52px;
@@ -3234,6 +3260,10 @@ h2, h3 {
     display: none;
   }
   .package-price-table {
+    min-width: 0;
+  }
+  .price-tier-table,
+  .rated-table {
     min-width: 0;
   }
   .price-card-wide {
