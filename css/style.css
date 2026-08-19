@@ -2607,38 +2607,28 @@ h2, h3 {
   font-size: 0.85rem;
 }
 
-.contact-dock {
+.side-contact {
   position: fixed;
-  right: 18px;
   bottom: 18px;
   z-index: 60;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
   gap: 10px;
 }
 
-.contact-dock-menu {
-  display: flex;
-  flex-direction: column;
+.side-contact--left {
+  left: 12px;
+  align-items: flex-start;
+}
+
+.side-contact--right {
+  right: 12px;
   align-items: flex-end;
-  gap: 10px;
-  opacity: 0;
-  pointer-events: none;
-  transform: translateY(12px);
-  transition: opacity 0.25s ease, transform 0.25s ease;
 }
 
-.contact-dock.is-open .contact-dock-menu {
-  opacity: 1;
-  pointer-events: auto;
-  transform: none;
-}
-
-.dock-btn,
-.dock-toggle {
-  width: 56px;
-  height: 56px;
+.side-btn {
+  width: 52px;
+  height: 52px;
   padding: 0;
   border-radius: 50%;
   border: 0;
@@ -2646,46 +2636,33 @@ h2, h3 {
   place-items: center;
   color: #fff;
   cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.dock-btn svg,
-.dock-toggle svg {
+.side-btn:hover {
+  transform: scale(1.08);
+}
+
+.side-btn svg {
   width: 26px;
   height: 26px;
   fill: currentColor;
 }
 
-.dock-clean-icon {
-  fill: none;
-  stroke: #fff;
-  stroke-width: 2.2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.dock-whatsapp {
+.side-whatsapp {
   background: #25d366;
   box-shadow: 0 10px 24px rgba(37, 211, 102, 0.4);
 }
 
-.dock-call {
+.side-call {
   background: var(--gold);
   box-shadow: 0 10px 24px rgba(245, 130, 32, 0.4);
 }
 
-.dock-email {
+.side-email {
   background: #4d1b0b;
   box-shadow: 0 10px 24px rgba(77, 27, 11, 0.35);
-}
-
-.dock-toggle {
-  background: var(--gold-gradient);
-  color: #fff;
-  box-shadow: 0 10px 24px rgba(245, 130, 32, 0.45);
-}
-
-.contact-dock.is-open .dock-toggle {
-  background: #4d1b0b;
 }
 
 .reveal {
@@ -3244,9 +3221,16 @@ h2, h3 {
     max-width: 100%;
   }
   .slider-btn { display: none; }
-  .contact-dock {
-    right: 12px;
+  .side-contact {
     bottom: 12px;
+  }
+
+  .side-contact--left {
+    left: 8px;
+  }
+
+  .side-contact--right {
+    right: 8px;
   }
 }
 
@@ -3317,9 +3301,13 @@ h2, h3 {
     width: 38px;
     height: 38px;
   }
-  .dock-btn,
-  .dock-toggle {
-    width: 48px;
-    height: 48px;
+  .side-btn {
+    width: 44px;
+    height: 44px;
+  }
+
+  .side-btn svg {
+    width: 22px;
+    height: 22px;
   }
 }

@@ -414,18 +414,4 @@
     );
   }
 
-  const dock = document.getElementById("contactDock");
-  const dockToggle = document.getElementById("contactDockToggle");
-  if (dock && dockToggle) {
-    dockToggle.addEventListener("click", function () {
-      const open = dock.classList.toggle("is-open");
-      dockToggle.setAttribute("aria-expanded", open ? "true" : "false");
-    });
-    document.addEventListener("click", function (event) {
-      if (!dock.contains(event.target)) {
-        dock.classList.remove("is-open");
-        dockToggle.setAttribute("aria-expanded", "false");
-      }
-    });
-  }
 })();
